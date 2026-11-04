@@ -9,7 +9,6 @@ Cada artículo empieza con un bloque de metadatos:
     description: Resumen breve (aparece en Google y en las tarjetas)
     image: agenda-abierta.jpg        (opcional, en assets/img/)
     alt: Descripción de la imagen    (opcional)
-    credit: Freepik                  (opcional, autoría de fotos de stock)
     category: Noticias               (Noticias | Consejos)
     -->
     <p>Contenido en HTML…</p>
@@ -149,10 +148,7 @@ def main():
         if p.get("image"):
             ld["image"] = f"{SITE}assets/img/{p['image']}"
         extra = f'\n  <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
-        credit = ""
-        if p.get("credit"):
-            credit = f'<figcaption class="cover-credit">Imagen: <a href="https://www.freepik.es/" target="_blank" rel="noopener">{html.escape(p["credit"])}</a></figcaption>'
-        cover = (f'        <figure class="article-cover"><img src="../assets/img/{p["image"]}" alt="{html.escape(p.get("alt", p["title"]))}">{credit}</figure>\n'
+        cover = (f'        <figure class="article-cover"><img src="../assets/img/{p["image"]}" alt="{html.escape(p.get("alt", p["title"]))}"></figure>\n'
                  if p.get("image") else "")
         others = [o for o in posts if o is not p][:3]
         more = ""
