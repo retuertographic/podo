@@ -9,14 +9,19 @@ Web estática (HTML/CSS/JS, sin dependencias) del Centro de Podología y Posturo
 ## Publicar
 Basta con servir la carpeta (GitHub Pages, Netlify, cualquier hosting). Para verla en local: abrir `index.html`.
 
-## Actualidad (noticias y consejos)
-Los artículos se escriben en `content/noticias/*.html` (ver el formato al inicio de `tools/build_news.py`). Después:
+## Estructura y generación
 
-```
-python3 tools/build_news.py
-```
+La web se genera con `python3 tools/build.py` (sin dependencias). No edites a mano `index.html` ni `noticias/`: se sobrescriben.
 
-Esto genera las páginas de `noticias/`, el listado, el RSS (`noticias/feed.xml`), las 3 últimas tarjetas de la portada, `sitemap.xml` y `robots.txt`. La cabecera y el pie de las páginas de noticias se copian de `index.html`, así que vuelve a ejecutarlo si cambias esas partes.
+| Carpeta | Contenido |
+|---|---|
+| `partials/` | Elementos comunes: `head`, `header`, `footer`, `whatsapp`, `icons`, `scripts`, `news-card`, `article-cta`. Se incluyen con `{{> nombre}}`; `{{root}}` es la ruta a la raíz. |
+| `src/index.html` | Plantilla de la portada. |
+| `templates/` | Plantillas de artículo y del listado de Actualidad. |
+| `content/noticias/` | Artículos: `slug.html` (español) + `slug.en.html` y `slug.de.html`. El generador avisa si falta alguna traducción. |
+| `assets/js/i18n.js` | Textos de la interfaz en inglés y alemán (el español está en el HTML). |
+
+Genera: `index.html`, `noticias/*.html`, `noticias/feed.xml`, `sitemap.xml` y `robots.txt`.
 
 Publicación: la web se sirve desde la rama `gh-pages` (https://retuertographic.github.io/podo/).
 

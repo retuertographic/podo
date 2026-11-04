@@ -10,11 +10,21 @@
   /* ---------- Idiomas ---------- */
   // El HTML contiene el español: lo guardamos como referencia.
   var nodes = document.querySelectorAll("[data-i18n]");
+  var attrNodes = document.querySelectorAll("[data-i18n-aria], [data-i18n-alt]");
+  var perLangAlt = document.querySelectorAll("[data-alt-en], [data-alt-de]");
+  var LOCALES = { es: "es-ES", en: "en-GB", de: "de-DE" };
   dict.es = dict.es || {};
   nodes.forEach(function (el) {
     var k = el.getAttribute("data-i18n");
     if (!(k in dict.es)) dict.es[k] = el.innerHTML.trim();
   });
+  attrNodes.forEach(function (el) {
+    var a = el.getAttribute("data-i18n-aria"), b = el.getAttribute("data-i18n-alt");
+    if (a && !(a in dict.es)) dict.es[a] = el.getAttribute("aria-label");
+    if (b && !(b in dict.es)) dict.es[b] = el.getAttribute("alt");
+  });
+  perLangAlt.forEach(function (el) { el.setAttribute("data-alt-es", el.getAttribute("alt") || ""); });
+  var originalTitle = document.title;
 
   function t(key) {
     return (dict[current] && dict[current][key]) || dict.es[key] || "";
@@ -31,8 +41,27 @@
       var val = t(el.getAttribute("data-i18n"));
       if (val) el.innerHTML = val;
     });
+    attrNodes.forEach(function (el) {
+      var a = el.getAttribute("data-i18n-aria"), b = el.getAttribute("data-i18n-alt");
+      if (a && t(a)) el.setAttribute("aria-label", t(a));
+      if (b && t(b)) el.setAttribute("alt", t(b));
+    });
+    perLangAlt.forEach(function (el) {
+      el.setAttribute("alt", el.getAttribute("data-alt-" + lang) || el.getAttribute("data-alt-es"));
+    });
+    // Fechas de los artículos en el formato de cada idioma
+    document.querySelectorAll("time.js-date[datetime]").forEach(function (el) {
+      var p = el.getAttribute("datetime").split("-");
+      try {
+        el.textContent = new Intl.DateTimeFormat(LOCALES[lang], { day: "numeric", month: "long", year: "numeric" })
+          .format(new Date(+p[0], +p[1] - 1, +p[2]));
+      } catch (e) {}
+    });
+    // Título de la pestaña
     var titleKey = document.body.getAttribute("data-title-key");
+    var pageTitle = document.body.getAttribute("data-title-" + lang);
     if (titleKey) document.title = t(titleKey);
+    else document.title = pageTitle || originalTitle;
     document.querySelectorAll(".lang-switch button").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
     });

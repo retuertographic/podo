@@ -3,6 +3,16 @@
    se publican en español; solo se traduce la interfaz que los rodea. */
 window.SCR_I18N = {
   en: {
+    "nav.home": "Home",
+    "nav.aria": "Main menu",
+    "brand.home": "SCR Podiatry & Posturology · Home",
+    "hero.alt": "Silvia Cáceres Romano, podiatrist and posturologist",
+    "zn.lpAlt": "Clinic entrance at C/ Cabaiguán 12, Local B, Breña Alta",
+    "nw.cat.news": "News",
+    "nw.cat.tips": "Tips",
+    "wa.title": "Silvia · SCR Podiatry",
+    "wa.close": "Close",
+    "meta.newsTitle": "News · SCR Podiatry & Posturology · Breña Alta (La Palma) & Santa Cruz de Tenerife",
     "skip": "Skip to content",
     "brand.sub": "Podiatry & Posturology",
     "nav.services": "Treatments",
@@ -144,7 +154,6 @@ window.SCR_I18N = {
     "nw.read": "Read more →",
     "nw.more": "More news",
     "nw.back": "← Back to news",
-    "nw.esnote": "This article is available in Spanish. Feel free to contact us in English if you have any questions.",
     "nw.ctaT": "Would you like us to assess your case?",
     "nw.ctaD": "Request your appointment and we'll confirm it personally.",
     "nw.listT": "News and tips",
@@ -184,6 +193,16 @@ window.SCR_I18N = {
   },
 
   de: {
+    "nav.home": "Startseite",
+    "nav.aria": "Hauptmenü",
+    "brand.home": "Podologie & Posturologie SCR · Startseite",
+    "hero.alt": "Silvia Cáceres Romano, Podologin und Posturologin",
+    "zn.lpAlt": "Eingang der Praxis in der C/ Cabaiguán 12, Local B, Breña Alta",
+    "nw.cat.news": "Neuigkeiten",
+    "nw.cat.tips": "Tipps",
+    "wa.title": "Silvia · Podologie SCR",
+    "wa.close": "Schließen",
+    "meta.newsTitle": "Aktuelles · Podologie & Posturologie SCR · Breña Alta (La Palma) & Santa Cruz de Tenerife",
     "skip": "Zum Inhalt springen",
     "brand.sub": "Podologie & Posturologie",
     "nav.services": "Behandlungen",
@@ -325,7 +344,6 @@ window.SCR_I18N = {
     "nw.read": "Weiterlesen →",
     "nw.more": "Weitere Neuigkeiten",
     "nw.back": "← Zurück zu Aktuelles",
-    "nw.esnote": "Dieser Artikel ist auf Spanisch verfasst. Bei Fragen können Sie uns gern auf Deutsch kontaktieren.",
     "nw.ctaT": "Sollen wir uns Ihren Fall ansehen?",
     "nw.ctaD": "Fragen Sie Ihren Termin an — wir bestätigen ihn persönlich.",
     "nw.listT": "Neuigkeiten und Tipps",
@@ -367,6 +385,7 @@ window.SCR_I18N = {
   /* Textos en español que no están en el HTML */
   es: {
     "wa.prefill": "Hola Silvia, me gustaría solicitar una cita.",
-    "meta.title": "Podología y Posturología SCR · Silvia Cáceres Romano · Breña Alta (La Palma) y Tenerife"
+    "meta.title": "Podología y Posturología SCR · Silvia Cáceres Romano · Breña Alta (La Palma) y Tenerife",
+    "meta.newsTitle": "Actualidad · Podología y Posturología SCR · Breña Alta (La Palma) y Santa Cruz de Tenerife"
   }
 };

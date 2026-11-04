@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+{{> head}}
+  <title>Actualidad · Podología y Posturología SCR · Breña Alta (La Palma) y Santa Cruz de Tenerife</title>
+  <meta name="description" content="Novedades de la consulta y consejos de podología y posturología de Silvia Cáceres Romano en La Palma y Tenerife.">
+  <link rel="canonical" href="{{url}}">
+  <link rel="alternate" hreflang="es" href="{{url}}">
+  <link rel="alternate" hreflang="en" href="{{url}}?lang=en">
+  <link rel="alternate" hreflang="de" href="{{url}}?lang=de">
+  <link rel="alternate" hreflang="x-default" href="{{url}}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:title" content="Actualidad · Podología y Posturología SCR">
+  <meta property="og:description" content="Novedades de la consulta y consejos de podología y posturología en La Palma y Tenerife.">
+  <meta property="og:locale" content="es_ES">
+</head>
+<body data-title-key="meta.newsTitle">
+{{> header}}
+
+  <main id="main">
+    <section class="section page-top">
+      <div class="container">
+        <div class="section-head">
+          <p class="breadcrumb"><a href="{{root}}" data-i18n="nav.home">Inicio</a> / <span data-i18n="nav.news">Actualidad</span></p>
+          <p class="eyebrow" data-i18n="nw.eyebrow">Actualidad</p>
+          <h1 data-i18n="nw.listT">Novedades y consejos</h1>
+          <p data-i18n="nw.listD">Novedades de la consulta y consejos sobre salud del pie y postura de la mano de Silvia Cáceres Romano.</p>
+        </div>
+        <div class="news-grid">
+{{cards}}
+        </div>
+      </div>
+    </section>
+  </main>
+
+{{> footer}}
+{{> whatsapp}}
+{{> icons}}
+{{> scripts}}
+</body>
+</html>

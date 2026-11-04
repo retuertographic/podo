@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+{{> head}}
+  <title>{{title_es}} · Podología y Posturología SCR</title>
+  <meta name="description" content="{{desc_es}}">
+  <link rel="canonical" href="{{url}}">
+  <link rel="alternate" hreflang="es" href="{{url}}">
+  <link rel="alternate" hreflang="en" href="{{url}}?lang=en">
+  <link rel="alternate" hreflang="de" href="{{url}}?lang=de">
+  <link rel="alternate" hreflang="x-default" href="{{url}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{url}}">
+  <meta property="og:title" content="{{title_es}}">
+  <meta property="og:description" content="{{desc_es}}">
+{{og_image}}
+  <meta property="og:locale" content="es_ES">
+  <script type="application/ld+json">{{jsonld}}</script>
+</head>
+<body {{title_attrs}}>
+{{> header}}
+
+  <main id="main">
+    <article class="article">
+      <div class="container narrow page-hero">
+        <p class="breadcrumb"><a href="{{root}}" data-i18n="nav.home">Inicio</a> / <a href="./" data-i18n="nav.news">Actualidad</a></p>
+        <p class="eyebrow" data-i18n="{{cat_key}}">{{cat_es}}</p>
+        <h1>{{title_ml}}</h1>
+        <p class="article-meta"><time class="js-date" datetime="{{date}}">{{date_es}}</time><span>·</span><span>Silvia Cáceres Romano</span></p>
+{{cover}}
+{{body_ml}}
+{{> article-cta}}
+        <p class="article-back"><a href="./" data-i18n="nw.back">← Volver a Actualidad</a></p>
+      </div>
+    </article>
+{{more}}
+  </main>
+
+{{> footer}}
+{{> whatsapp}}
+{{> icons}}
+{{> scripts}}
+</body>
+</html>

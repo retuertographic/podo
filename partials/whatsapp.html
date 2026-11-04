@@ -1,0 +1,25 @@
+  <!-- Burbuja de WhatsApp -->
+  <div class="wa-widget" id="wa-widget">
+    <div class="wa-panel" id="wa-panel" role="dialog" aria-labelledby="wa-title" hidden>
+      <div class="wa-panel-head">
+        <span class="wa-avatar">SCR</span>
+        <div>
+          <strong id="wa-title" data-i18n="wa.title">Silvia · Podología SCR</strong>
+          <small data-i18n="wa.status">Normalmente responde en unas horas</small>
+        </div>
+        <button type="button" class="wa-close" id="wa-close" aria-label="Cerrar" data-i18n-aria="wa.close">×</button>
+      </div>
+      <div class="wa-panel-body">
+        <p class="wa-msg" data-i18n="wa.hello">¡Hola! 👋 ¿Quieres pedir cita o tienes alguna duda? Escríbenos y te respondemos lo antes posible.</p>
+      </div>
+      <a class="wa-start js-wa-bubble" href="https://wa.me/34640997860" target="_blank" rel="noopener">
+        <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+        <span data-i18n="wa.start">Abrir chat de WhatsApp</span>
+      </a>
+    </div>
+    <button type="button" class="wa-bubble" id="wa-bubble" aria-expanded="false" aria-controls="wa-panel">
+      <span class="sr-only" data-i18n="wa.label">Contactar por WhatsApp</span>
+      <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+      <span class="wa-dot" aria-hidden="true"></span>
+    </button>
+  </div>
