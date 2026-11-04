@@ -32,7 +32,7 @@ from email.utils import format_datetime
 from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SITE = "https://retuertographic.github.io/podo/"
+SITE = "https://podo.retuertographicdesign.com/"
 LANGS = ["es", "en", "de"]
 MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
           "agosto", "septiembre", "octubre", "noviembre", "diciembre"]

@@ -23,6 +23,6 @@ La web se genera con `python3 tools/build.py` (sin dependencias). No edites a ma
 
 Genera: `index.html`, `noticias/*.html`, `noticias/feed.xml`, `sitemap.xml` y `robots.txt`.
 
-Publicación: la web se sirve desde la rama `gh-pages` (https://retuertographic.github.io/podo/).
+Publicación: la web se sirve desde la rama `gh-pages` con el dominio propio https://podo.retuertographicdesign.com/ (definido en el archivo `CNAME`). En el DNS (SiteGround) debe existir un registro CNAME `podo` → `retuertographic.github.io`.
 
 ## Pendiente de completar
