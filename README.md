@@ -21,5 +21,4 @@ Esto genera las páginas de `noticias/`, el listado, el RSS (`noticias/feed.xml`
 Publicación: la web se sirve desde la rama `gh-pages` (https://retuertographic.github.io/podo/).
 
 ## Pendiente de completar
-- Enlace exacto a la página de Facebook (ahora apunta a una búsqueda) — buscar `facebook.com/search` en `index.html`.
 - Ubicación concreta de la consulta en Tenerife.
