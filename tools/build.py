@@ -33,6 +33,9 @@ from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://podo.retuertographicdesign.com/"
+# Imagen para compartir: se sirve desde raw.githubusercontent.com porque tiene HTTPS válido
+# siempre (WhatsApp/Facebook no descargan imágenes con certificado inválido).
+SHARE_IMG = "https://raw.githubusercontent.com/retuertographic/podo/gh-pages/assets/img/og-silvia-caceres-romano.jpg"
 LANGS = ["es", "en", "de"]
 MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
           "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
@@ -55,7 +58,7 @@ def partial(name):
 
 
 def render(tpl, ctx):
-    ctx = {"site": SITE, **ctx}
+    ctx = {"site": SITE, "share_img": SHARE_IMG, **ctx}
     for _ in range(5):  # partials anidados
         tpl = re.sub(r"\{\{>\s*([\w-]+)\s*\}\}", lambda m: partial(m.group(1)), tpl)
 
