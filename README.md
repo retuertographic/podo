@@ -21,6 +21,8 @@ La web se genera con `python3 tools/build.py` (sin dependencias). No edites a ma
 | `content/noticias/` | Artículos: `slug.html` (español) + `slug.en.html` y `slug.de.html`. El generador avisa si falta alguna traducción. |
 | `assets/js/i18n.js` | Textos de la interfaz en inglés y alemán (el español está en el HTML). |
 
+Imagen para compartir en redes: `assets/img/og-silvia-caceres-romano.jpg` (1200×630), diseñada en `tools/og/og-image.html` y generada con `node tools/og/render.js`. Las etiquetas para compartir están en `partials/share.html`.
+
 Genera: `index.html`, `noticias/*.html`, `noticias/feed.xml`, `sitemap.xml` y `robots.txt`.
 
 Publicación: la web se sirve desde la rama `gh-pages` con el dominio propio https://podo.retuertographicdesign.com/ (definido en el archivo `CNAME`). En el DNS (SiteGround) debe existir un registro CNAME `podo` → `retuertographic.github.io`.

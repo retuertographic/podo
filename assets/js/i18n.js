@@ -189,7 +189,7 @@ window.SCR_I18N = {
     "wa.start": "Open WhatsApp chat",
     "wa.label": "Contact via WhatsApp",
     "wa.prefill": "Hello Silvia, I'd like to request an appointment. (Written in English)",
-    "meta.title": "SCR Podiatry & Posturology · Silvia Cáceres Romano · Breña Alta (La Palma) & Tenerife"
+    "meta.title": "Silvia Cáceres Romano · Podiatrist & Posturologist in La Palma and Tenerife · SCR"
   },
 
   de: {
@@ -379,13 +379,13 @@ window.SCR_I18N = {
     "wa.start": "WhatsApp-Chat öffnen",
     "wa.label": "Per WhatsApp kontaktieren",
     "wa.prefill": "Hallo Silvia, ich möchte gern einen Termin anfragen. (Auf Deutsch geschrieben)",
-    "meta.title": "Podologie & Posturologie SCR · Silvia Cáceres Romano · Breña Alta (La Palma) & Teneriffa"
+    "meta.title": "Silvia Cáceres Romano · Podologin & Posturologin auf La Palma und Teneriffa · SCR"
   },
 
   /* Textos en español que no están en el HTML */
   es: {
     "wa.prefill": "Hola Silvia, me gustaría solicitar una cita.",
-    "meta.title": "Podología y Posturología SCR · Silvia Cáceres Romano · Breña Alta (La Palma) y Tenerife",
+    "meta.title": "Silvia Cáceres Romano · Podóloga y Posturóloga en La Palma y Tenerife · SCR",
     "meta.newsTitle": "Actualidad · Podología y Posturología SCR · Breña Alta (La Palma) y Santa Cruz de Tenerife"
   }
 };

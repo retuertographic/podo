@@ -55,6 +55,7 @@ def partial(name):
 
 
 def render(tpl, ctx):
+    ctx = {"site": SITE, **ctx}
     for _ in range(5):  # partials anidados
         tpl = re.sub(r"\{\{>\s*([\w-]+)\s*\}\}", lambda m: partial(m.group(1)), tpl)
 
@@ -147,10 +148,9 @@ def main():
             "author": {"@type": "Person", "name": "Silvia Cáceres Romano"},
             "publisher": {"@type": "Organization", "name": "Podología y Posturología SCR"},
         }
-        cover, og_image = "", ""
+        cover = ""
         if p.get("image"):
             ld["image"] = f"{SITE}assets/img/{p['image']}"
-            og_image = f'  <meta property="og:image" content="{SITE}assets/img/{p["image"]}">'
             cover = (f'        <figure class="article-cover"><img src="../assets/img/{p["image"]}" '
                      f'alt="{esc(alts["es"] or titles["es"])}" data-alt-en="{esc(alts["en"] or titles["en"])}" '
                      f'data-alt-de="{esc(alts["de"] or titles["de"])}"></figure>')
@@ -165,7 +165,7 @@ def main():
             "root": "../", "url": url,
             "title_es": esc(titles["es"]), "desc_es": esc(descs["es"]),
             "title_attrs": " ".join(f'data-title-{l}="{esc(titles[l])} · Podología y Posturología SCR"' for l in ("en", "de")),
-            "og_image": og_image, "jsonld": json.dumps(ld, ensure_ascii=False),
+            "jsonld": json.dumps(ld, ensure_ascii=False),
             "cat_key": CATEGORIES[p["category"]], "cat_es": esc(p["category"]),
             "title_ml": ml({k: esc(v) for k, v in titles.items()}),
             "date": p["date"], "date_es": fecha(p["date"]),
