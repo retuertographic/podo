@@ -21,4 +21,3 @@ Esto genera las páginas de `noticias/`, el listado, el RSS (`noticias/feed.xml`
 Publicación: la web se sirve desde la rama `gh-pages` (https://retuertographic.github.io/podo/).
 
 ## Pendiente de completar
-- Ubicación concreta de la consulta en Tenerife.
