@@ -33,9 +33,7 @@ from datetime import datetime, timezone
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://podo.retuertographicdesign.com/"
-# Imagen para compartir: se sirve desde raw.githubusercontent.com porque tiene HTTPS válido
-# siempre (WhatsApp/Facebook no descargan imágenes con certificado inválido).
-SHARE_IMG = "https://raw.githubusercontent.com/retuertographic/podo/gh-pages/assets/img/og-silvia-caceres-romano.jpg"
+SHARE_IMG = SITE + "assets/img/og-silvia-caceres-romano.jpg"  # imagen al compartir (1200×630)
 LANGS = ["es", "en", "de"]
 MONTHS = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
           "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
